@@ -111,7 +111,7 @@ function keyupsetuplink(e) {
             break;
         case 'SoftRight': window.close();
             break;
-        case 'SoftLeft': visitlink('http://wikimedia.github.io/wikipedia-kaios');
+        case 'SoftLeft': case 'Escape': visitlink('https://xn--45bn2bzad1vag.xn--54b7fta0cc/');
             break;
 
     }
@@ -144,7 +144,7 @@ function keyupload(e) {
 }
 
 function keyupremove(e) {
-    if (e.key == 'F1' || e.key == 'SoftLeft') {
+    if (e.key == 'F1' || e.key == 'SoftLeft'|| e.key == 'Escape') {
         if (document.querySelectorAll('#link').length > 1) {
             if (this == this.parentNode.firstElementChild) {
                 localStorage.setItem('link', localStorage.getItem('link').replace(this.getAttribute('data-link') + '|', ''));
@@ -169,35 +169,6 @@ function focus(move) {
     targetElement.scrollIntoView({ block: 'center' });
 
 }
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    getKaiAd({
-        publisher: '080b82ab-b33a-4763-a498-50f464567e49',
-        app: 'pwa_manager',
-        slot: 'pwa_manager',
-        onerror: err => console.error('Custom catch:', err),
-        onready: ad => {
-            ad.call('display');
-        }
-    });
-});
-
-
-document.body.addEventListener('keyup', () => {
-    getKaiAd({
-        publisher: '080b82ab-b33a-4763-a498-50f464567e49',
-        app: 'pwa_manager',
-        slot: 'pwa_manager',
-        onerror: err => console.error('Custom catch:', err),
-        onready: ad => {
-            ad.call('display');
-        }
-    });
-});
-
-
-
 
 
 
