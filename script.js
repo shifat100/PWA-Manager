@@ -99,18 +99,7 @@ if (localStorage.getItem('link') == null || localStorage.getItem('link') == '|')
 
 function keyupsetuplink(e) {
     switch (e.key) {
-        case 'ArrowDown': focus(1);
-            break;
-        case 'ArrowUp': focus(-1);
-            break;
-        case 'Down': focus(1);
-            break;
-        case 'Up': focus(-1);
-            break;
-        case 'Enter': document.activeElement.click();
-            break;
-        case 'SoftRight': window.close();
-            break;
+        
         case 'SoftLeft': case 'Escape': visitlink('https://xn--45bn2bzad1vag.xn--54b7fta0cc/');
             break;
 
@@ -120,22 +109,7 @@ function keyupsetuplink(e) {
 
 function keyupload(e) {
     switch (e.key) {
-        case 'ArrowDown': focus(3);
-            break;
-        case 'ArrowUp': focus(-3);
-            break;
-        case 'ArrowLeft': focus(-1);
-            break;
-        case 'ArrowRight': focus(1);
-            break;
-        case 'Down': focus(1);
-            break;
-        case 'Up': focus(-1);
-            break;
-        case 'Enter': document.activeElement.click();
-            break;
-        case 'SoftRight': window.close();
-            break;
+        
         case 'Backspace': loader.style.display = 'none';
             break;
         case '0': tooglecursor();
@@ -176,3 +150,4 @@ function focus(move) {
 
 
 function urlreachable(r) { try { return u = new URL(r), !0 } catch (r) { return !1 } }
+
